@@ -29,7 +29,7 @@ function ClimaProvider({children}) {
         try {
             const {ciudad, pais}  = datos
 
-            const url = `http://api.openweathermap.org/geo/1.0/direct?q=${ciudad},${pais}&limit=1&appid=${API_KEY}`
+            const url = `https://api.openweathermap.org/geo/1.0/direct?q=${ciudad},${pais}&limit=1&appid=${API_KEY}`
 
             const { data } = await axios(url)
             const {lat, lon} = data[0]
